@@ -44,8 +44,3 @@ async def print(ctx, args):
 
 
 bot.run(TOKEN)
-
-
-def print_members(bot):
-    for member in bot.guild.members:
-            
