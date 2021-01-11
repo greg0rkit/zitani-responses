@@ -1,4 +1,4 @@
-# bot.py On github
+# bot.py
 import os
 
 import discord
@@ -13,9 +13,9 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
 
-intents = discord.Intents()
-intents.members = True
-intents.guilds = True
+intents = discord.Intents.default()
+
+
 bot = commands.Bot(command_prefix='%', intents = intents)
 
 @bot.event
@@ -28,7 +28,6 @@ async def on_ready():
         f'{bot.user.name} is connected to the following guild: \n'
         f'{guild.name}\n'
     )
-
     print(
         f'Amount of members: {guild.member_count}\n'
     )
@@ -37,6 +36,9 @@ async def on_ready():
 async def pinging_bot(ctx):
     await ctx.channel.send("kariolh mh ta valeis me emas")
 
+#@bot.command(name="print")
+#async def print(ctx, args):
+#    await ctx.channel.send(args)
 
 
 
