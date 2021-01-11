@@ -1,1 +1,1 @@
-worker: python bot/bot_respond.py
+worker: python bot_respond.py
