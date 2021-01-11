@@ -37,9 +37,6 @@ async def on_ready():
 async def pinging_bot(ctx):
     await ctx.channel.send("kariolh mh ta valeis me emas")
 
-@bot.command(name="print")
-async def print(ctx, args):
-    await ctx.channel.send(args)
 
 
 
